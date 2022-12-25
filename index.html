@@ -52,6 +52,36 @@
                 </div>
             </div>
 
+            <!-- Quiz Page -->
+            <div class="quiz-page-container   " id="quizPageContainer">
+                <div id="gameContainer">
+
+                    <!-- Questions and answers area -->
+                    <div class="question-wrapper">
+                        <p id="questionText"></p>
+                    </div>
+                    <div class="answers-wrapper">
+                        <input type="radio" value="0" name="answer" id="answer1Radio" required="required" onclick="enableConfirm()"/>
+                        <label id="answer1Label" for="answer1Radio" class="answers">answer 1</label>
+                        <input type="radio" value="1" name="answer" id="answer2Radio" required="required" onclick="enableConfirm()"/>
+                        <label id="answer2Label" for="answer2Radio" class="answers">answer 2</label>
+                        <input type="radio" value="2" name="answer" id="answer3Radio" required="required" onclick="enableConfirm()"/>
+                        <label id="answer3Label" for="answer3Radio" class="answers">answer 3</label>
+                       <!-- Confirm answer button -->
+                       <div class="quiz-actions-wrapper">
+                          <button disabled id="confirmButton">Confirm</button>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
 
 
 
