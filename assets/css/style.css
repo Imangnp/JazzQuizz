@@ -1,0 +1,82 @@
+/* --- Global style --- */ 
+* {
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: Lato;
+}
+
+body {
+    background: radial-gradient(39% 39% at 70% 97%, #8724C9 0%, #160055 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    width: auto;
+    height: 100vh;
+    margin: 0px; 
+}
+
+/* --- Logo --- */ 
+.logo {
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+}
+
+/* Styling Background image of Home page */
+.home-container {
+    background: url("../images/background-intro.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-text-wrapper {
+    display: grid;
+}
+
+h1 {
+    color: #ffff;
+    font-size: 42px;
+}
+
+.p-home {
+    color: #00E3BB ;
+    font-size: 25px;
+}
+
+.play-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* --- Styling Home page's buttons --- */
+.rules-button, .play-button {
+    cursor:pointer;
+    background-color: #ffff;
+    border: 2px solid #ffff ;
+    padding: 8px 90px;
+    color: #5200FF ;
+    border-radius: 35px;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.rules-button:hover, .play-button:hover {
+    background-color: #8724C9;
+    border: 2px solid #ffff ;
+    padding: 8px 90px;
+    color: #ffff ;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 25px ;
+}
