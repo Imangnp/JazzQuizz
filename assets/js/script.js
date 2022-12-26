@@ -103,6 +103,12 @@ const questions = [
 const homePageContainer = document.getElementById("homePageContainer");
 const rulesPageContainer = document.getElementById("rulesPageContainer");
 const quizPageContainer = document.getElementById("quizPageContainer");
+const questionCounter = document.getElementById("questionCounter");
+const scoreText = document.getElementById("scoreText");
+const progress = document.getElementById("progress");
+const questionsNum = 10;
+
+let score = 0
 
 
 
@@ -179,12 +185,17 @@ function checkAnswer(questionIndex) {
 function quizController() {
     let questionIndex = 0;
     showQuestion(questionIndex);
-     // Let to confirm the selected answer
-     let confirmButton = document.getElementById('confirmButton');
+    // Let to confirm the selected answer
+    let confirmButton = document.getElementById('confirmButton');
+     questionCounter.innerText = 1 + "/" + questionsNum;
+     progress.style.width = `10%`;
      confirmButton.addEventListener('click', function() {
         if(questionIndex < questions.length - 1){
         checkAnswer(questionIndex)
         questionIndex++
+        // Updates progress bar
+        questionCounter.innerText = (questionIndex + 1) + "/" + questionsNum;
+        progress.style.width = `${((questionIndex + 1) / questionsNum) * 100}%`;
         showQuestion(questionIndex)
         disableConfirm();
         } else {
