@@ -127,6 +127,7 @@ function playNow() {
     homePageContainer.classList.add("hide");
     rulesPageContainer.classList.add("hide");   
     quizPageContainer.classList.remove("hide");
+    quizController();
 
 }
 
@@ -152,10 +153,58 @@ function checkAnswer(questionIndex) {
     let answer3 = document.getElementById('answer3Radio');
     let scoreCounter = document.getElementById('scoreText');
     let answer = null
+    if (answer1.checked) {
+        answer = 0;
+    } else if (answer2.checked) {
+       answer = 1;
+    } else if (answer3.checked) {
+        answer = 2;
+    } else {
+    }
 
+    // Add up scores for correct answers
+    if (answer == questions[questionIndex].correctAnswer) {
+        score = score + 10
+        answer1.checked = false
+        answer2.checked = false
+        answer3.checked = false
+        scoreCounter.innerHTML = `${score}`
+    } else {
+        answer1.checked = false
+        answer2.checked = false
+        answer3.checked = false
+    }
 }
 
 function quizController() {
     let questionIndex = 0;
     showQuestion(questionIndex);
+     // Let to confirm the selected answer
+     let confirmButton = document.getElementById('confirmButton');
+     confirmButton.addEventListener('click', function() {
+        if(questionIndex < questions.length - 1){
+        checkAnswer(questionIndex)
+        questionIndex++
+        showQuestion(questionIndex)
+        disableConfirm();
+        } else {
+        console.log('last')
+        checkAnswer(questionIndex)
+        questionIndex = 0
+        }
+    });
 }
+
+function disableConfirm() {
+    let confirmButton = document.getElementById('confirmButton');
+    confirmButton.disabled = true;
+}
+
+function enableConfirm() {
+    let confirmButton = document.getElementById('confirmButton');
+    confirmButton.disabled = false;
+}
+
+
+
+
