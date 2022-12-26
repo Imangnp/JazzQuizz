@@ -103,6 +103,7 @@ const questions = [
 const homePageContainer = document.getElementById("homePageContainer");
 const rulesPageContainer = document.getElementById("rulesPageContainer");
 const quizPageContainer = document.getElementById("quizPageContainer");
+const scorePageContainer = document.getElementById("scorePageContainer");
 const questionCounter = document.getElementById("questionCounter");
 const scoreText = document.getElementById("scoreText");
 const progress = document.getElementById("progress");
@@ -217,6 +218,10 @@ function enableConfirm() {
 }
 
 function showResults() {
+    homePageContainer.classList.add("hide");
+    rulesPageContainer.classList.add("hide");   
+    quizPageContainer.classList.add("hide");
+    scorePageContainer.classList.remove("hide");
     let finalScore = document.getElementById("finalScore");
     finalScore.innerHTML= score ;
 }
