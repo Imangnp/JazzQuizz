@@ -102,6 +102,7 @@ const questions = [
 
 const homePageContainer = document.getElementById("homePageContainer");
 const rulesPageContainer = document.getElementById("rulesPageContainer");
+const quizPageContainer = document.getElementById("quizPageContainer");
 
 
 
@@ -114,4 +115,47 @@ const rulesPageContainer = document.getElementById("rulesPageContainer");
 function showRules() {
     homePageContainer.classList.add("hide");
     rulesPageContainer.classList.remove("hide");   
+}
+
+/**
+   * To start the game by Play Now button this function hides the Home page 
+   * and loads the quiz page 
+  */
+function playNow() {
+    // Removing CSS classes to hide Home page and Rules page
+    logo.classList.add("hide");
+    homePageContainer.classList.add("hide");
+    rulesPageContainer.classList.add("hide");   
+    quizPageContainer.classList.remove("hide");
+
+}
+
+/**
+   * Gets the questions and answers from the array and deploys them 
+   * inside the quiz page by using innerHTML
+  */
+function showQuestion(questionIndex) {
+    let questionText = document.getElementById('questionText')
+    let answer1Label = document.getElementById('answer1Label')
+    let answer2Label = document.getElementById('answer2Label')
+    let answer3Label = document.getElementById('answer3Label')
+    
+    questionText.innerHTML = questions[questionIndex].question;
+    answer1Label.innerHTML = questions[questionIndex].answers[0];
+    answer2Label.innerHTML = questions[questionIndex].answers[1];
+    answer3Label.innerHTML = questions[questionIndex].answers[2];
+}
+
+function checkAnswer(questionIndex) {
+    let answer1 = document.getElementById('answer1Radio');
+    let answer2 = document.getElementById('answer2Radio');
+    let answer3 = document.getElementById('answer3Radio');
+    let scoreCounter = document.getElementById('scoreText');
+    let answer = null
+
+}
+
+function quizController() {
+    let questionIndex = 0;
+    showQuestion(questionIndex);
 }
