@@ -143,6 +143,69 @@ h1 {
     max-width: 325px;
 }
 
+/* --- Progress bar --- */
+.progress-bar {
+    display: flex;
+    align-items: baseline;
+    margin-top: 50px;
+}
+
+.progress-text {
+    font-size:20px ;
+    color: #fafafa;
+    padding-right: 25px;
+}
+
+#progressBar {
+    width: 250px;
+    height: 8px;
+    background-color: #8724C9;
+    border-radius: 27px;
+}
+
+#progress {
+    height : 8px;
+    background-color: #00FFD1;
+    border-radius: 27px;
+    width: 0%;
+}
+
+/* --- Display --- */
+#display {
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+
+#displayItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 18px;
+    color: #fafafa;
+    align-items: baseline;
+    margin: 0;
+}
+
+.display-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* --- Audio --- */
+.play-pause {
+    color:#00FFD1;
+    align-items: baseline;
+    font-size: 22px;
+}
+
+.music-icon {
+    color:#00FFD1;
+    align-items: baseline;
+}
+
+
+
 /* --- QUESTION --- */
 .question-wrapper {
     color: #fff;
