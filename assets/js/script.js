@@ -199,8 +199,8 @@ function quizController() {
         showQuestion(questionIndex)
         disableConfirm();
         } else {
-        console.log('last')
         checkAnswer(questionIndex)
+        showResults()
         questionIndex = 0
         }
     });
@@ -214,6 +214,11 @@ function disableConfirm() {
 function enableConfirm() {
     let confirmButton = document.getElementById('confirmButton');
     confirmButton.disabled = false;
+}
+
+function showResults() {
+    let finalScore = document.getElementById("finalScore");
+    finalScore.innerHTML= score ;
 }
 
 
