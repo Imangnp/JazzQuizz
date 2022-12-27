@@ -49,6 +49,7 @@ body {
 h1 {
     color: #ffff;
     font-size: 42px;
+    padding-top: 50px;
 }
 
 .p-home {
@@ -74,6 +75,7 @@ h1 {
     border-radius: 35px;
     margin: 20px;
     font-size: 25px;
+    text-decoration: none;
 }
 
 .rules-button:hover, .play-button:hover {
@@ -91,6 +93,7 @@ h1 {
     font-size: 12px;
     position: absolute;
     bottom: 1%;
+    left: 0;
     color: #fff;
 }
 
@@ -114,9 +117,9 @@ h1 {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-size: 18px;
-    padding: 0 130px;
-    margin: 0 630px;
+    font-size: 20px;
+    padding: 80px 130px 0 130px;
+    margin: 0 400px;
 }
 
 /* --- To Hide pages --- */
@@ -167,7 +170,7 @@ h1 {
     height : 8px;
     background-color: #00FFD1;
     border-radius: 27px;
-    width: 0%;
+    width: 10%;
 }
 
 /* --- Display --- */
@@ -183,7 +186,6 @@ h1 {
     align-items: baseline;
     font-size: 18px;
     color: #fafafa;
-    align-items: baseline;
     margin: 0;
 }
 
@@ -197,6 +199,7 @@ h1 {
     color:#00FFD1;
     align-items: baseline;
     font-size: 22px;
+    cursor:pointer;
 }
 
 .music-icon {
@@ -248,7 +251,7 @@ input[type=radio]:checked + label {
 
 /* --- Quiz action --- */
 .quiz-actions-wrapper {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 #confirmButton {
@@ -257,6 +260,7 @@ input[type=radio]:checked + label {
     border-radius: 7px;
     padding: 5px 50px;
     border: 1px solid #00FFD1;
+    cursor: not-allowed;
 }
   
 #confirmButton:hover {
@@ -289,3 +293,671 @@ input[type=radio]:checked + label {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* Media quearies for making the pages responsive in different devices */
+@media only screen and (min-width: 913px) and (max-width: 1024px) {
+    /* --- Home page --- */
+    .logo img {
+        width: 14%;
+    }
+    
+    h1 {
+        font-size: 28px;
+        padding-top: 60px;
+    }
+
+    .p-home {
+        font-size: 18px;
+    }
+    
+    .rules-button, .play-button {
+        padding: 4px 40px;
+        margin: 12px;
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 8px;
+    }
+
+    /* --- Rules page --- */
+    .p-rules {
+        font-size: 16px;
+        padding: 0;
+        margin: 0 350px;
+    }
+
+    /* --- Quiz page --- */
+    .progress-bar {
+        margin-top: 60px;
+        height: 50px;
+    }
+
+    .progress-text {
+        font-size: 14px;
+    }
+
+    .play-pause {
+        font-size: 16px;
+    }
+
+    #displayItem {
+        font-size: 15px;
+    }
+
+    #gameContainer {
+        max-width: 250px;
+    }
+
+    .question-wrapper {
+        font-size: 20px;
+    }
+
+    .display-text {
+        font-size: 16px;
+    }
+
+    .answers {
+        font-size: 16px;
+        margin: 15px 0;
+        padding: 7px 0;
+    }
+
+    #confirmButton {
+        padding: 2px 35px;
+        font-size: 12px;
+    }
+    
+    /* --- Score page --- */
+    .p-score {
+        font-size: 24px;
+    }
+
+    .p-score > h1 {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 912px) {
+    /* --- Home page --- */
+    .home-container {
+        margin: 0 100px;
+        width: auto;
+    }
+
+    .logo img {
+        width: 28%;
+    }
+
+    .logo {
+        top: 21%;
+    }
+    
+    h1 {
+        font-size: 48px;
+        padding-top: 0;
+    }
+
+    .p-home {
+        font-size: 32px;
+    }
+    
+    .rules-button, .play-button {
+        padding: 6px 55px;
+        margin: 15px;
+        font-size: 28px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    /* --- Rules page --- */
+    .rules-page {
+        margin: 0 100px;
+        width: auto;
+    }
+
+    .p-rules {
+        font-size: 20px;
+        padding: 0;
+        margin: 0 135px;
+    }
+
+    /* --- Quiz page --- */
+    .quiz-page-container {
+        margin: 0 100px;
+        width: auto;
+    }
+
+    #gameContainer {
+        max-width: 380px;
+    }
+
+    .progress-bar {
+        margin-top: 20px;
+        height: 90px;
+    }
+
+    .progress-text {
+        font-size: 24px;
+    }
+
+    #progressBar {
+        height: 8px;
+    }
+
+    #progress {
+        height: 8px;
+    }
+
+    .play-pause {
+        font-size: 28px;
+    }
+
+    #displayItem {
+        font-size: 24px;
+    }
+
+    .question-wrapper {
+        font-size: 30px;
+    }
+
+    .display-text {
+        font-size: 24px;
+    }
+
+    .answers {
+        font-size: 24px;
+        margin: 20px 0;
+        padding: 8px 0;
+    }
+
+    .quiz-actions-wrapper {
+        margin-top: 50px;
+    }
+
+    #confirmButton {
+        padding: 3px 55px;
+        font-size: 16px;
+    }
+    
+    /* --- Score page --- */
+    /* --- Quiz page --- */
+    .score-page {
+        margin: 0 100px;
+        width: auto;
+    }
+
+    .p-score {
+        font-size: 38px;
+    }
+
+    .p-score > h1 {
+        font-size: 44px;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+    /* --- Home page --- */
+    .logo img {
+        width: 30%;
+        margin-top: 55px;
+    }
+
+    .home-container {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 52px;
+        padding-top: 0px;
+    }
+
+    .p-home {
+        font-size: 30px;
+    }
+
+    .play-button, .rules-button {
+        padding: 8px 55px;
+        margin: 20px;
+        font-size: 25px;
+    }
+
+    /* --- Rules page --- */
+    .rules-page {
+        margin: 0 55px;
+        width: auto;
+    }
+
+    .p-rules {
+        font-size: 18px;
+        padding: 0;
+        margin: 0 150px;
+    }
+
+    /* --- Quiz page --- */
+    .quiz-page-container {
+        margin: 0 55px;
+        width: auto;
+    }
+
+    .progress-bar {
+        margin-top: 30px;
+        height: 80px;
+    }
+
+    .progress-text {
+        font-size: 20px;
+    }
+
+    .play-pause {
+        font-size: 22px;
+    }
+
+    #displayItem {
+        font-size: 18px;
+    }
+
+    .display-text {
+        font-size: 18px;
+    }
+
+    #gameContainer {
+        max-width: 325px;
+    }
+
+    .question-wrapper {
+        font-size: 26px;
+    }
+
+    .answers {
+        font-size: 22px;
+        margin: 20px 0;
+        padding: 8px 0;
+    }
+
+    #confirmButton {
+        padding: 5px 50px;
+        font-size: 18px;
+    }
+    
+    /* --- Score page --- */
+    .score-page {
+        margin: 0 55px;
+        width: auto;
+    }
+    .p-score {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (min-width: 413px) and (max-width: 550px) {
+    .logo img {
+        width: 25%;
+        margin-top: 70px;
+    }
+
+    /* --- Home page --- */
+    .home-container {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 38px;
+        padding-top: 50px;
+    }
+
+    .p-home {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    .play-button, .rules-button {
+        padding: 6px 45px;
+        margin: 15px;
+        font-size: 18px;
+    }
+
+    /* --- Rules page --- */
+    .rules-page {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    .p-rules {
+        font-size: 16px;
+        padding-top: 40px;
+        margin: 0 50px;
+    }
+
+    /* --- Quiz page --- */
+    .quiz-page-container {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    .progress-bar {
+        margin-top: 30px;
+        height: 50px;
+    }
+
+    #progressBar {
+        height: 6px;
+    }
+
+    #progress {
+        height: 6px;
+    }
+
+    .progress-text {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+
+    .play-pause {
+        font-size: 16px;
+    }
+
+    #displayItem {
+        font-size: 12px;
+    }
+
+    .display-text {
+        font-size: 12px;
+    }
+
+    #gameContainer {
+        max-width: 200px;
+    }
+
+    .question-wrapper {
+        font-size: 16px;
+    }
+
+    .answers-wrapper {
+        margin-top: 25px;
+    }
+
+    .answers {
+        font-size: 14px;
+        margin: 14px 0;
+        padding: 7px 0;
+    }
+
+    .quiz-actions-wrapper {
+        margin-top: 25px;
+    }
+
+    #confirmButton {
+        padding: 3px 35px;
+        font-size: 10px;
+    }
+    
+    /* --- Score page --- */
+    .score-page {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    .p-score {
+        font-size: 18px;
+    }
+
+    .p-score > h1 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 412px) {
+    .logo {
+        top: 10% ;
+    }
+
+    .logo img {
+        width: 30%;
+        margin-top: 125px;
+    }
+
+    /* --- Home page --- */
+    .home-container {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding-top: 70px;
+    }
+
+    .p-home {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .play-button, .rules-button {
+        padding: 1px 20px;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    /* --- Rules page --- */
+    .rules-page {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .p-rules {
+        font-size: 10px;
+        padding-top: 40px;
+        margin: 0 50px;
+    }
+
+    /* --- Quiz page --- */
+    .quiz-page-container {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .progress-bar {
+        margin-top: 60px;
+        height: 30px;
+    }
+
+    #progressBar {
+        height: 4px;
+    }
+
+    #progress {
+        height: 4px;
+    }
+
+    .progress-text {
+        font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .play-pause {
+        font-size: 14px;
+    }
+
+    #displayItem {
+        font-size: 10px;
+    }
+
+    .display-text {
+        font-size: 10px;
+    }
+
+    #gameContainer {
+        max-width: 200px;
+    }
+
+    .question-wrapper {
+        font-size: 12px;
+    }
+
+    .answers-wrapper {
+        margin-top: 25px;
+    }
+
+    .answers {
+        font-size: 10px;
+        margin: 14px 0;
+        padding: 7px 0;
+    }
+
+    .quiz-actions-wrapper {
+        margin-top: 15px;
+    }
+
+    #confirmButton {
+        padding: 2px 20px;
+        font-size: 8px;
+    }
+    
+    /* --- Score page --- */
+    .score-page {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .p-score {
+        font-size: 16px;
+    }
+
+    .p-score > h1 {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    /* --- Home page --- */
+    .logo img {
+        width: 30%;
+        margin-top: 45px;
+    }
+    .home-container {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding-top: 70px;
+    }
+
+    .p-home {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .play-button, .rules-button {
+        padding: 1px 20px;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    .play-button:hover, .rules-button:hover {
+        padding: 1px 20px;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    /* --- Rules page --- */
+    .rules-page {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .p-rules {
+        font-size: 10px;
+        padding-top: 40px;
+        margin: 0 50px;
+    }
+
+    /* --- Quiz page --- */
+    .quiz-page-container {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .progress-bar {
+        margin-top: 60px;
+        height: 30px;
+    }
+
+    #progressBar {
+        height: 4px;
+    }
+
+    #progress {
+        height: 4px;
+    }
+
+    .progress-text {
+        font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .play-pause {
+        font-size: 14px;
+    }
+
+    #displayItem {
+        font-size: 10px;
+    }
+
+    .display-text {
+        font-size: 10px;
+    }
+
+    #gameContainer {
+        max-width: 200px;
+    }
+
+    .question-wrapper {
+        font-size: 12px;
+    }
+
+    .answers-wrapper {
+        margin-top: 25px;
+    }
+
+    .answers {
+        font-size: 10px;
+        margin: 14px 0;
+        padding: 7px 0;
+    }
+
+    .quiz-actions-wrapper {
+        margin-top: 15px;
+    }
+
+    #confirmButton {
+        padding: 2px 20px;
+        font-size: 8px;
+    }
+    
+    /* --- Score page --- */
+    .score-page {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .p-score {
+        font-size: 16px;
+    }
+
+    .p-score > h1 {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+
+}
+

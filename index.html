@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="a quiz game about Jazz">
+        <meta name="keywords" content="jazz, music, quiz, game, play">
         <meta name="author" content="Imangnp">
 
         <title>JazzQuizz!</title>
@@ -38,6 +40,9 @@
                     <button id="rulesButton" class="rules-button" onclick="showRules()">Rules</button>
                   </div>
                 </div>
+                <footer>
+                    <div class="copyright"> © 2022 Copyright by Jazz club Quizz. All Rights Reserved. </div>
+                </footer>
             </div>
 
             <!-- Rules page -->
@@ -49,7 +54,7 @@
                      <p>Play/pause audio anytime you want.</p>
                      <p>No time limit.</p>
                      <p>Enjoy the QUIZZ!</p>
-                     <input id="playButton" type="button" class="play-button" value="Play Now" onclick="playNow()">
+                     <input type="button" class="play-button" value="Play Now" onclick="playNow()">
                   </div>
                 </div>
             </div>
@@ -59,9 +64,8 @@
                 <div id="gameContainer">
                     <!-- Progress bar -->
                     <div class="progress-bar">
-                        <p class="progress-text" id="questionCounter"> </p>
+                        <p class="progress-text" id="questionCounter">1/10</p>
                         <div id="progressBar"><div id ="progress"></div></div>
-                        <div id ="progress"></div>
                     </div>
                     <!-- Play/pause music icon -->
                     <div id="display" class="display">
@@ -72,7 +76,7 @@
                         <div id="displayItem">
                              <div class="music-icon"> <i class="fa-solid fa-music">&nbsp;&nbsp;&nbsp;</i></div>
                              <p class="display-prefix">Score:&nbsp;&nbsp; </p>
-                             <h1 class="display-text" id="scoreText">0</h1>
+                             <p class="display-text" id="scoreText">0</p>
                         </div>
                     </div>
 
@@ -81,15 +85,15 @@
                         <p id="questionText"></p>
                     </div>
                     <div class="answers-wrapper">
-                        <input type="radio" value="0" name="answer" id="answer1Radio" required="required" onclick="enableConfirm()"/>
+                        <input type="radio" value="0" name="answer" id="answer1Radio" required="required" onclick="enableConfirm()">
                         <label id="answer1Label" for="answer1Radio" class="answers">answer 1</label>
-                        <input type="radio" value="1" name="answer" id="answer2Radio" required="required" onclick="enableConfirm()"/>
+                        <input type="radio" value="1" name="answer" id="answer2Radio" required="required" onclick="enableConfirm()">
                         <label id="answer2Label" for="answer2Radio" class="answers">answer 2</label>
-                        <input type="radio" value="2" name="answer" id="answer3Radio" required="required" onclick="enableConfirm()"/>
+                        <input type="radio" value="2" name="answer" id="answer3Radio" required="required" onclick="enableConfirm()">
                         <label id="answer3Label" for="answer3Radio" class="answers">answer 3</label>
                        <!-- Confirm answer button -->
                        <div class="quiz-actions-wrapper">
-                          <button disable id="confirmButton">Confirm</button>
+                          <button disabled id="confirmButton">Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -105,16 +109,14 @@
                   </div>
                   <!-- Button for options to play again or do to Home page -->
                   <div class="btn-go-home">
-                    <a href="index.html"><button id="goHomeButton" class="play-button">Go to Home</button></a>
+                    <a href="index.html" id="goHomeButton" class="play-button">Go to Home</a>
                   </div>
                 </div>
             </div>
 
         </main>
 
-        <footer>
-            <div class="copyright"> © 2022 Copyright by Jazz club Quizz. All Rights Reserved. </div>
-        </footer>
+        
 
         <!-- Link to External JavaScript -->
         <script src="assets/js/script.js"></script>

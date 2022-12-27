@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 // Available Questions and answers
 const questions = [
     {
@@ -60,7 +62,7 @@ const questions = [
         correctAnswer: 1
     },    
     {
-        question: 'How many songs did Duke Ellington write??',
+        question: 'How many songs did Duke Ellington write?',
         answers: [
             '125',
             '500',
@@ -98,17 +100,17 @@ const questions = [
   ];
 
 // The constants to get elements from the DOM
+const logo = document.getElementById("logo");
 const homePageContainer = document.getElementById("homePageContainer");
 const rulesPageContainer = document.getElementById("rulesPageContainer");
 const quizPageContainer = document.getElementById("quizPageContainer");
 const scorePageContainer = document.getElementById("scorePageContainer");
 const questionCounter = document.getElementById("questionCounter");
-const scoreText = document.getElementById("scoreText");
 const progress = document.getElementById("progress");
 const questionsNum = 10;
 
 // keeps the start score
-let score = 0
+let score = 0 ;
 
 
 // Background music and play/pause button(icon)
@@ -116,15 +118,6 @@ let score = 0
 let music = new Audio("../assets/audio/background-music.mp3");
 music.volume = 0.1;  
 let musicButton = document.getElementById("musicButton");
-musicButton.addEventListener("click", function() {
-if (music.paused == true) {
-    music.play();
-    musicButton.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-} else {
-    music.pause();
-    musicButton.innerHTML = `<i class="fa-solid fa-play"></i>`;
-}
-});
 
 
 /**
@@ -139,7 +132,7 @@ function showRules() {
 /**
    * To start the game by Play Now button this function hides the Home page 
    * and loads the quiz page 
-  */
+*/
 function playNow() {
     // Removing CSS classes to hide Home page and Rules page
     logo.classList.add("hide");
@@ -147,6 +140,17 @@ function playNow() {
     rulesPageContainer.classList.add("hide");   
     quizPageContainer.classList.remove("hide");
     quizController();
+
+    musicButton.addEventListener("click", function() {
+        if (music.paused == true) {
+            music.play();
+            musicButton.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+        } else {
+            music.pause();
+            musicButton.innerHTML = `<i class="fa-solid fa-play"></i>`;
+        }
+    });
+        
     // Plays jazz music
     music.play();
 }
@@ -154,12 +158,12 @@ function playNow() {
 /**
    * Gets the questions and answers from the array and deploys them 
    * inside the quiz page by using innerHTML
-  */
+*/
 function showQuestion(questionIndex) {
-    let questionText = document.getElementById('questionText')
-    let answer1Label = document.getElementById('answer1Label')
-    let answer2Label = document.getElementById('answer2Label')
-    let answer3Label = document.getElementById('answer3Label')
+    let questionText = document.getElementById('questionText');
+    let answer1Label = document.getElementById('answer1Label');
+    let answer2Label = document.getElementById('answer2Label');
+    let answer3Label = document.getElementById('answer3Label');
     
     questionText.innerHTML = questions[questionIndex].question;
     answer1Label.innerHTML = questions[questionIndex].answers[0];
@@ -170,34 +174,39 @@ function showQuestion(questionIndex) {
 /**
    * Compares selected option to available answers and 
    * Checks for correct/wrong answer.
-  */
+*/
 function checkAnswer(questionIndex) {
     let answer1 = document.getElementById('answer1Radio');
     let answer2 = document.getElementById('answer2Radio');
     let answer3 = document.getElementById('answer3Radio');
     let scoreCounter = document.getElementById('scoreText');
-    let answer = null
+    let answer = null;
     if (answer1.checked) {
         answer = 0;
     } else if (answer2.checked) {
        answer = 1;
     } else if (answer3.checked) {
         answer = 2;
-    } else {
     }
 
     // Add up scores for correct answers
     if (answer == questions[questionIndex].correctAnswer) {
-        score = score + 10
-        answer1.checked = false
-        answer2.checked = false
-        answer3.checked = false
-        scoreCounter.innerHTML = `${score}`
-    } else {
-        answer1.checked = false
-        answer2.checked = false
-        answer3.checked = false
-    }
+        score = score + 10;
+        scoreCounter.innerHTML = `${score}`;
+    } 
+
+    answer1.checked = false;
+    answer2.checked = false;
+    answer3.checked = false;
+}
+
+/**
+   * This function updates the number of current question by text
+   * and also shows that on the progress bar.
+  */
+function updateQuestionProgress(questionIndex) {
+    questionCounter.innerText = (questionIndex + 1) + "/" + questionsNum;
+    progress.style.width = `${((questionIndex + 1) / questionsNum) * 100}%`;
 }
 
 /**
@@ -210,21 +219,18 @@ function quizController() {
     showQuestion(questionIndex);
     // Let to confirm the selected answer
     let confirmButton = document.getElementById('confirmButton');
-     questionCounter.innerText = 1 + "/" + questionsNum;
-     progress.style.width = `10%`;
      confirmButton.addEventListener('click', function() {
-        if(questionIndex < questions.length - 1){
-        checkAnswer(questionIndex)
-        questionIndex++
-        // Updates progress bar
-        questionCounter.innerText = (questionIndex + 1) + "/" + questionsNum;
-        progress.style.width = `${((questionIndex + 1) / questionsNum) * 100}%`;
-        showQuestion(questionIndex)
-        disableConfirm();
+        if(questionIndex < questions.length - 1) {
+            checkAnswer(questionIndex);
+            questionIndex++;
+            // Updates progress bar
+            updateQuestionProgress(questionIndex);
+            showQuestion(questionIndex);
+            disableConfirm();
         } else {
-        checkAnswer(questionIndex)
-        showResults()
-        questionIndex = 0
+            checkAnswer(questionIndex);
+            showResults();
+            questionIndex = 0;
         }
     });
 }
@@ -237,11 +243,13 @@ function quizController() {
 function disableConfirm() {
     let confirmButton = document.getElementById('confirmButton');
     confirmButton.disabled = true;
+    confirmButton.style.cursor = 'not-allowed';
 }
 
 function enableConfirm() {
     let confirmButton = document.getElementById('confirmButton');
     confirmButton.disabled = false;
+    confirmButton.style.cursor = 'pointer';
 }
 
 /**
