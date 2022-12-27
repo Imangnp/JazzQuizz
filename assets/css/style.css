@@ -69,7 +69,7 @@ h1 {
     cursor:pointer;
     background-color: #ffff;
     border: 2px solid #ffff ;
-    padding: 8px 90px;
+    padding: 8px 55px;
     color: #5200FF ;
     border-radius: 35px;
     margin: 20px;
@@ -79,7 +79,7 @@ h1 {
 .rules-button:hover, .play-button:hover {
     background-color: #8724C9;
     border: 2px solid #ffff ;
-    padding: 8px 90px;
+    padding: 8px 55px;
     color: #ffff ;
     border-radius: 35px;
     text-decoration: none;

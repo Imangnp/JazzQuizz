@@ -97,9 +97,7 @@ const questions = [
     },
   ];
 
-
-
-
+// The constants to get elements from the DOM
 const homePageContainer = document.getElementById("homePageContainer");
 const rulesPageContainer = document.getElementById("rulesPageContainer");
 const quizPageContainer = document.getElementById("quizPageContainer");
@@ -109,10 +107,24 @@ const scoreText = document.getElementById("scoreText");
 const progress = document.getElementById("progress");
 const questionsNum = 10;
 
+// keeps the start score
 let score = 0
 
 
-
+// Background music and play/pause button(icon)
+// These lines are written from project-portfolio-2 slack channel
+let music = new Audio("../assets/audio/background-music.mp3");
+music.volume = 0.1;  
+let musicButton = document.getElementById("musicButton");
+musicButton.addEventListener("click", function() {
+if (music.paused == true) {
+    music.play();
+    musicButton.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+} else {
+    music.pause();
+    musicButton.innerHTML = `<i class="fa-solid fa-play"></i>`;
+}
+});
 
 
 /**
@@ -135,7 +147,8 @@ function playNow() {
     rulesPageContainer.classList.add("hide");   
     quizPageContainer.classList.remove("hide");
     quizController();
-
+    // Plays jazz music
+    music.play();
 }
 
 /**
@@ -154,6 +167,10 @@ function showQuestion(questionIndex) {
     answer3Label.innerHTML = questions[questionIndex].answers[2];
 }
 
+/**
+   * Compares selected option to available answers and 
+   * Checks for correct/wrong answer.
+  */
 function checkAnswer(questionIndex) {
     let answer1 = document.getElementById('answer1Radio');
     let answer2 = document.getElementById('answer2Radio');
@@ -183,6 +200,11 @@ function checkAnswer(questionIndex) {
     }
 }
 
+/**
+   * Calling this function by clicking on confirm button and it 
+   * loads the next available question. When all questions are over 
+   * it will lead to the Score page.
+*/
 function quizController() {
     let questionIndex = 0;
     showQuestion(questionIndex);
@@ -207,6 +229,11 @@ function quizController() {
     });
 }
 
+/**
+   * These functions help to disable the confirm button when the user 
+   * havn't choosen any answer yet. And again it anable The button after 
+   * an answer been selected.
+*/
 function disableConfirm() {
     let confirmButton = document.getElementById('confirmButton');
     confirmButton.disabled = true;
@@ -217,6 +244,10 @@ function enableConfirm() {
     confirmButton.disabled = false;
 }
 
+/**
+   * Loads the Score page and shows the quiz's results score by 
+   * hiding other pages. Score is a number between 0 - 100 .
+*/
 function showResults() {
     homePageContainer.classList.add("hide");
     rulesPageContainer.classList.add("hide");   
