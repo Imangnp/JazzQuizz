@@ -81,7 +81,7 @@ The logo was realized in Figma and exported in .svg for a better resolution.
 # Structure
 The page has a fairly straightforward design. Every page has a logo on the top part with stars and musical notes as decorations. I have to tell that the logo is clickable on the Start and Rouls pages only, because I want to avoid the user to go back while playing.
  ## Start screen
-The start screen design is characterized by black and white cutouts of famous Jazz artists. The main content is presented in the center of the screen and framed by a rectangle with rounded corners, to create dept from the gradient background.
+The start screen design is characterized by black and white cutouts of famous Jazz artists.The main content is presented in the center of the screen and framed by a rectangle with rounded corners, to create dept from the gradient background.
 
 The top part is dominated by the logo, while below it there is a header with a message to the user to incentivize to play the game.
 
@@ -98,7 +98,7 @@ After reading the rules, the user can directly play without going back to the pr
 ![Rules page](./assets/images/screenshot-rules.png)
 
   ## Displays
-  The design reveals an informative controls section where users can follow their progress and pause/play the theme tune while the start screen buttons and logo are hidden. A question counter, user score, and a play/pause button are located on the left, right, and between, respectively. 
+  The design reveals an informative controls section where users can follow their progress and pause/play the theme tune while the start screen buttons and logo are hidden. A question counter, user score, and a play/pause button are located on the left, right, and between, respectively.
    
 ![Display](./assets/images/display.png)
 
@@ -146,30 +146,74 @@ After reading the rules, the user can directly play without going back to the pr
 
 # Credits
 
-- Figma (https://www.figma.com/) – Figma is the design tool I’ve adopted for the wireframe design first, the colour palette and the final design. All the graphic elements such as Logo, icons, pictures are created, edited, and exported from Figma. 
-- ["Use contrast”](https://www.figma.com/community/plugin/1149686177449921115/Use-Contrast)  is a plug in that allows to check the contrast on a very fist stage during design. 
-- Google Fonts – The font “Lato” is downloaded from google fonts and uploaded into the style.css file applied to all of the pages. 
-- [Fontawesome](https://fontawesome.com/) - where icons used in the display are exported from.
-- [Favicon.io](https://favicon.io) - tool used to create favicon.
+- [Figma](https://www.figma.com/) is the design tool I’ve adopted for the wireframe design first, the colour palette and the final design. All the graphic elements such as Logo, icons, pictures are created, edited, and exported from Figma. 
+- [Useful trivia](https://www.usefultrivia.com/) is the source of the questions that I used in the quiz.
+- [Png egg](https://www.pngegg.com/) where the images in the background are downloaded from.
+- [Videvo](https://www.videvo.net/) provided royalty free music.
+- [Use contrast](https://www.figma.com/community/plugin/1149686177449921115/Use-Contrast)  is a plug in that allows to check the contrast on a very fist stage during design. 
+- [Google Fonts](https://fonts.google.com/specimen/Lato) The font “Lato” is downloaded from google fonts and uploaded into the style.css file applied to all of the pages. 
+- [Fontawesome](https://fontawesome.com/) where icons used in the display are exported from.
+- [Favicon.io](https://favicon.io) tool used to create favicon.
 - [W3C validator](https://validator.w3.org/) is used to validate the HTML code.
 - [Jigsaw validator](https://jigsaw.w3.org/) is used to validate CSS styles.
 - [JSHint](https://jshint.com/) is used to validate JavaScript logics.
 - Lighthouse is used to test accessibility and performance.
 - part of the code to pause/play the music was written thanks to the support and help of other students in the slack channel "#project-portfolio-2".
 
+# Deployment
+This quiz was deployed to [GitHub Pages](https://pages.github.com/).  The steps taken in deploying this project are as follows:
+
+- Log in to GitHub and select 'JazzQuizz' from the list of repositories.
+- Click on 'Settings' on the menu just below the repository's name.
+- Navigate to the left side menu and click on 'Pages' in the 'Code and Automation' section.
+- In the Main area under 'Build and Deployment', click on the source dropdown menu and select the 'Deploy from Branch' selection.
+- In the 'Branch' section select the `main` branch and the `/(root)` folder.
+- Click 'Save'.
+- After refreshing a message with the link will appear at the top of the page indicating that the deployment was succesful and your site is live.
 
 
 
 
+# Future Scope
+In a future update of the quiz game, the user will face immediate feedback when selecting one of the options. 
+If the answer is right the user will receive a positive feedback by facing a green colored button. If the answer is wrong, than the feedback will be negative (red color).
+The "Confirm" button will no more be needed, because after the instant feedback, the page will move to the next question automatically.
+
+ ![screenshot answers](./assets/images/screenshot-answers.png)
+
+
+# Bugs
+
+### - Problem:
+ the user was able to confirm and move to the next question even without selecting any answer first. 
+
+### Solution:
+ I fixed with utilising two funcions to disable the button when no answer is chosen, and enable the button when the user choose one of the options. 
+
+![screenshot confirm functions](./assets/images/screenshot-confirm-functions.png)
+
+
+### - Problem:
+ The music was not pausing when clicking on the pause icon. 
+### Solution:
+ Thanks to the Slack community for the insights,I solved by adding an onclick EventListener to the play/pause button.
+
+### - Problem:
+ The progress bar was not starting from the first question, it wasn't showing any number or progress until the use 
+ ### Solution:
+ My mentor suggested to create a separate function to update the progress on the progress bar.
+
+![screenshot progress](./assets/images/screenshot-progress.png)
+
+# Acknowledgements
+- My mentor Akshat Garg for supporting me and helping during the development of this project.
+- My wife for her precious help with Figma.
+- Slack community that in every moment of day and night are present and helpful to solve problems.
 
 
 
 
-
-
-
-
-[Back to Top](# )
+[Back to Top](#)
 
 ---
 
