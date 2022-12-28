@@ -332,8 +332,12 @@ input[type=radio]:checked + label {
         font-size: 18px;
     }
 
+    /* --- Footer --- */
     .copyright {
         font-size: 8px;
+        position: absolute;
+        bottom: 1%;
+        left: 0;
     }
 
     /* --- Rules page --- */
@@ -426,7 +430,11 @@ input[type=radio]:checked + label {
 
     .copyright {
         font-size: 14px;
+        position: absolute;
+        bottom: 1%;
+        left: 0;
     }
+    
 
     /* --- Rules page --- */
     .rules-page {
@@ -499,7 +507,6 @@ input[type=radio]:checked + label {
     }
     
     /* --- Score page --- */
-    /* --- Quiz page --- */
     .score-page {
         margin: 0 100px;
         width: auto;
@@ -769,7 +776,11 @@ input[type=radio]:checked + label {
     /* --- Footer --- */
     .copyright {
         font-size: 10px;
+        position: absolute;
+        bottom: 1%;
+        left: 0;
     }
+    
 
     /* --- Rules page --- */
     .rules-page {
@@ -779,7 +790,6 @@ input[type=radio]:checked + label {
 
     .p-rules {
         font-size: 12px;
-        padding: 100px 50px 0 50px;
     }
 
     /* --- Quiz page --- */
@@ -823,7 +833,7 @@ input[type=radio]:checked + label {
     }
 
     .question-wrapper {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .answers-wrapper {
@@ -831,7 +841,7 @@ input[type=radio]:checked + label {
     }
 
     .answers {
-        font-size: 14px;
+        font-size: 16px;
         margin: 20px 0;
         padding: 7px 0;
     }
@@ -841,8 +851,8 @@ input[type=radio]:checked + label {
     }
 
     #confirmButton {
-        padding: 2px 30px;
-        font-size: 12px;
+        padding: 3px 36px;
+        font-size: 14px;
     }
     
     /* --- Score page --- */
@@ -897,7 +907,11 @@ input[type=radio]:checked + label {
     /* --- Footer --- */
     .copyright {
         font-size: 8px;
+        position: absolute;
+        bottom: 1%;
+        left: 0;
     }
+    
 
     /* --- Rules page --- */
     .rules-page {

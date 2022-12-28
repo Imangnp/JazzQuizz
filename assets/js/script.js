@@ -114,7 +114,7 @@ let score = 0 ;
 
 
 // Background music and play/pause button(icon)
-let music = new Audio("../assets/audio/background-music.mp3");
+let music = new Audio("assets/audio/background-music.mp3");
 music.volume = 0.1;  
 let musicButton = document.getElementById("musicButton");
 
