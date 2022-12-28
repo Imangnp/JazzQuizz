@@ -1,4 +1,4 @@
-![Logo](./assets/images/logo.png)
+![Logo](./assets/images/Logo.svg)
 # JazzQuizz!
 Welcome to Jazz Quizz, a game for jazz music passionate. In this game users can test their knowledge of jazz by answering to ten questions which each question has three options to choose from. The users will not get a feedback immediately but at the end of the quiz in the Score page they will find out their score. The correct answer is not specified, this will lead the users to retry to get the correct answers and a higher score. 
 
@@ -28,8 +28,9 @@ ___
 - [Technologies](#technologies) 
 - [Credits](#credits)
 - [Deployment](#deployment)
-- [Bugs](#bugs)
 - [Future Scope](#future-scope)
+- [Bugs](#bugs)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -76,7 +77,7 @@ The logo is personally created playing with the word Jazz and Quiz, by adding th
 
 The logo was realized in Figma and exported in .svg for a better resolution.
 
-![Logo](./assets/images/logo.png)
+![Logo](./assets/images/Logo.svg)
 
 # Structure
 The page has a fairly straightforward design. Every page has a logo on the top part with stars and musical notes as decorations. I have to tell that the logo is clickable on the Start and Rouls pages only, because I want to avoid the user to go back while playing.

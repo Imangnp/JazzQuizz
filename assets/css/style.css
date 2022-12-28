@@ -27,7 +27,7 @@ body {
 /* --- Home page container --- */
 /* Styling Background image of Home page */
 .home-container {
-    background: url("../images/background-intro.svg");
+    background: url("../images/Background-Intro.png");
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -100,7 +100,7 @@ h1 {
 /* --- Rules page container --- */
 /* Styling Background image of Rules page */
 .rules-page {
-    background: url('../images/background-rules.svg');
+    background: url('../images/Background-Rules.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -130,7 +130,7 @@ h1 {
 /* --- Quiz page container --- */
 /* Styling Background image of quiz page */
 .quiz-page-container {
-    background: url("../images/background-questions.svg");
+    background: url("../images/Background-Questions.svg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -207,15 +207,13 @@ h1 {
     align-items: baseline;
 }
 
-
-
-/* --- QUESTION --- */
+/* --- Questions --- */
 .question-wrapper {
     color: #fff;
     font-size: 26px;
 }
 
-/* --- ANSWERS --- */
+/* --- Answers --- */
 .answers-wrapper {
     margin-top: 30px;
 }
@@ -258,7 +256,7 @@ input[type=radio]:checked + label {
     color: #00FFD1;
     background: #3d1488;
     border-radius: 7px;
-    padding: 5px 50px;
+    padding: 8px 60px;
     border: 1px solid #00FFD1;
     cursor: not-allowed;
 }
@@ -270,7 +268,7 @@ input[type=radio]:checked + label {
 /* --- Score page container --- */
 /* Styling Background image of score page */
 .score-page {
-    background: url('../images/background-score.svg');
+    background: url('../images/Background-Score.svg');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -296,6 +294,23 @@ input[type=radio]:checked + label {
 
 
 /* Media quearies for making the pages responsive in different devices */
+
+@media only screen and (min-width: 1600px) {
+    /* --- Home page --- */
+    .logo img {
+        width: 11.4%;
+    }
+
+    h1 {
+        font-size: 48px;
+        padding-top: 60px;
+    }
+
+    .p-home {
+        font-size: 28px;
+    }
+}
+
 @media only screen and (min-width: 913px) and (max-width: 1024px) {
     /* --- Home page --- */
     .logo img {
@@ -380,18 +395,18 @@ input[type=radio]:checked + label {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 912px) {
-    /* --- Home page --- */
-    .home-container {
-        margin: 0 100px;
-        width: auto;
+    .logo {
+        top: 21%;
     }
 
     .logo img {
         width: 28%;
     }
-
-    .logo {
-        top: 21%;
+    
+    /* --- Home page --- */
+    .home-container {
+        margin: 0 100px;
+        width: auto;
     }
     
     h1 {
@@ -501,12 +516,12 @@ input[type=radio]:checked + label {
 }
 
 @media only screen and (min-width: 551px) and (max-width: 768px) {
-    /* --- Home page --- */
     .logo img {
         width: 30%;
         margin-top: 55px;
     }
 
+    /* --- Home page --- */
     .home-container {
         margin: 0 50px;
         width: auto;
@@ -720,46 +735,56 @@ input[type=radio]:checked + label {
 
     .logo img {
         width: 30%;
-        margin-top: 125px;
+        margin-top: 140px;
     }
 
     /* --- Home page --- */
     .home-container {
-        margin: 0 10px;
+        margin: 0 20px;
         width: auto;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
         padding-top: 70px;
     }
 
     .p-home {
-        font-size: 14px;
+        font-size: 18px;
         margin: 10px 0;
     }
 
     .play-button, .rules-button {
-        padding: 1px 20px;
+        padding: 2px 40px;
         margin: 10px;
-        font-size: 12px;
+        font-size: 18px;
+    }
+
+    .play-button:hover, .rules-button:hover {
+        padding: 2px 40px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    /* --- Footer --- */
+    .copyright {
+        font-size: 10px;
     }
 
     /* --- Rules page --- */
     .rules-page {
-        margin: 0 10px;
+        margin: 0 20px;
         width: auto;
     }
 
     .p-rules {
-        font-size: 10px;
-        padding-top: 40px;
-        margin: 0 50px;
+        font-size: 12px;
+        padding: 100px 50px 0 50px;
     }
 
     /* --- Quiz page --- */
     .quiz-page-container {
-        margin: 0 10px;
+        margin: 0 20px;
         width: auto;
     }
 
@@ -777,28 +802,28 @@ input[type=radio]:checked + label {
     }
 
     .progress-text {
-        font-size: 10px;
+        font-size: 12px;
         padding-right: 10px;
     }
 
     .play-pause {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     #displayItem {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .display-text {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #gameContainer {
-        max-width: 200px;
+        max-width: 230px;
     }
 
     .question-wrapper {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .answers-wrapper {
@@ -806,18 +831,18 @@ input[type=radio]:checked + label {
     }
 
     .answers {
-        font-size: 10px;
-        margin: 14px 0;
+        font-size: 14px;
+        margin: 20px 0;
         padding: 7px 0;
     }
 
     .quiz-actions-wrapper {
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     #confirmButton {
-        padding: 2px 20px;
-        font-size: 8px;
+        padding: 2px 30px;
+        font-size: 12px;
     }
     
     /* --- Score page --- */
@@ -827,7 +852,7 @@ input[type=radio]:checked + label {
     }
 
     .p-score {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .p-score > h1 {
@@ -867,6 +892,11 @@ input[type=radio]:checked + label {
         padding: 1px 20px;
         margin: 10px;
         font-size: 12px;
+    }
+
+    /* --- Footer --- */
+    .copyright {
+        font-size: 8px;
     }
 
     /* --- Rules page --- */
