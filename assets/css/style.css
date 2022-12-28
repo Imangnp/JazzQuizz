@@ -737,7 +737,7 @@ input[type=radio]:checked + label {
 
 @media only screen and (min-width: 351px) and (max-width: 412px) {
     .logo {
-        top: 10% ;
+        top: 9% ;
     }
 
     .logo img {
@@ -799,7 +799,7 @@ input[type=radio]:checked + label {
     }
 
     .progress-bar {
-        margin-top: 60px;
+        margin-top: 65px;
         height: 30px;
     }
 

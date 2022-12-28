@@ -2,6 +2,8 @@
 # JazzQuizz!
 Welcome to Jazz Quizz, a game for jazz music passionate. In this game users can test their knowledge of jazz by answering to ten questions which each question has three options to choose from. The users will not get a feedback immediately but at the end of the quiz in the Score page they will find out their score. The correct answer is not specified, this will lead the users to retry to get the correct answers and a higher score. 
 
+You can find the live link here: [JazzQuizz!](https://imangnp.github.io/JazzQuizz/)
+
 ![Responsive](./assets/images/screenshot.png)
 
 ___
