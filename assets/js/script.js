@@ -114,7 +114,6 @@ let score = 0 ;
 
 
 // Background music and play/pause button(icon)
-// These lines are written from project-portfolio-2 slack channel
 let music = new Audio("../assets/audio/background-music.mp3");
 music.volume = 0.1;  
 let musicButton = document.getElementById("musicButton");
@@ -140,7 +139,7 @@ function playNow() {
     rulesPageContainer.classList.add("hide");   
     quizPageContainer.classList.remove("hide");
     quizController();
-
+    // These lines are written from project-portfolio-2 slack channel
     musicButton.addEventListener("click", function() {
         if (music.paused == true) {
             music.play();
